@@ -1,0 +1,30 @@
+.menu {
+	position: relative;
+}
+
+.menu > li {
+	display: inline-block;
+}
+
+.menu li {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background-color: aquamarine;
+}
+
+li {
+	list-style-type: none;
+}
+
+.menu ul {
+	display: none;
+	position: absolute;
+	border: 1px solid red;
+	padding-left: 0px;
+}
+
+.menu ul ul {
+	transform: translateX(100px);
+	top: 0px;
+}

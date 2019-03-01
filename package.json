@@ -1,0 +1,41 @@
+{
+	"name": "js-lab",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "live-server --port=8000",
+		"dev": "concurrently \"npm run babel\" \"npm run start\"",
+		"lab": "concurrently \"npm run babel\" \"npm run nodemon\"",
+		"babel": "babel src/app.js --watch --out-file build/app.js",
+		"nodemon": "nodemon src/app.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^3.5.1",
+		"date-fns": "^1.30.1",
+		"faker": "^4.1.0",
+		"jquery": "^3.3.1",
+		"jsonwebtoken": "^8.2.1",
+		"lodash": "^4.17.5",
+		"moment": "^2.22.2",
+		"mongoose": "^5.0.14",
+		"mysql": "^2.16.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.14.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-env": "^1.7.0",
+		"eslint": "^5.14.1",
+		"eslint-config-google": "^0.12.0",
+		"live-server": "^1.2.0",
+		"nodemon": "^1.17.3"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 8"
+	]
+}
