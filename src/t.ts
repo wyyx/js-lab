@@ -1,6 +1,6 @@
 interface User {
-	id: string
-	address: Address
+  id: string
+  address: Address
 }
 
 interface Address {}

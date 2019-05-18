@@ -1,13 +1,19 @@
-const array1 = [ 1, 2, 3, 4 ]
-const reducer = (accumulator, currentValue) => {
-	accumulator[currentValue] = currentValue
-	return accumulator
-}
+var h3 = document.querySelector('h3')
+var body = document.querySelector('body')
+h3.addEventListener('click', event => {
+  console.log('TCL: h3 -> event', event)
+})
 
-// 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer, {}))
-// expected output: 10
+body.addEventListener('click', event => {
+  console.log('TCL:  body -> event', event)
+})
 
-// 5 + 1 + 2 + 3 + 4
-// console.log(array1.reduce(reducer, 5))
-//
+body.addEventListener(
+  'click',
+  event => {
+    console.log('TCL:  capture body -> event', event)
+  },
+  {
+    capture: true
+  }
+)
