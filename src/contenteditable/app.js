@@ -1,7 +1,10 @@
 console.log('running app.js...')
 
-var richedit = document.getElementById('richedit')
-richedit.contentEditable = true
+var editable = document.querySelector('.editable')
 
-var res = document.execCommand('italic', true, null)
-console.log('TCL: res', res)
+editable.addEventListener('mouseleave', function() {
+  var selection = document.getSelection()
+  console.log('TCL: selection', selection)
+  document.execCommand('bold', false, null)
+  document.execCommand('italic', false, null)
+})
